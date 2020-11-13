@@ -1,6 +1,6 @@
 # Sert Tutorial
 
-## Submiting a job to sert
+## Connecting to Sert
 
 The first step for submiting the job is to connect to the remote server.
 This can be done in several ways depending on where you are.
@@ -19,6 +19,8 @@ The following command can be run to move to your scratch area by replacing *user
 ```bash
 cd /scratch/nas/num/username
 ```
+
+## Submiting a job to Sert
 
 Sert works with a job system where you request the server to run a script.
 You have to follow the following steps for each execution:
