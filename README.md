@@ -105,3 +105,43 @@ When you have it in the desired machine you can simply uncompress it with.
 ```bash
 unzip my_file.zip
 ```
+
+## Advanced usage of sbatch
+
+We submitting a job several parameters can be specified to contraint in which nodes the job can be run.
+This parameters are firstly the type of nodes to be used.
+Boolean operation can be used to make sets of this contraints.
+The following categories exist:
+- node-2014
+- node-2016
+- node-2017
+- node-2019
+
+The previous categories can be used as following.
+The example uses both 2019 and 2017 nodes.
+
+```bash
+sbatch --constraint="node-2017|node-2019" myjob.sh
+```
+
+By default the jobs are limited to 4 hours of execution time you can set the queue type in order to increase this time limit.
+Be mindfull that bigger queues have lower priority.
+
+Queue|Time Limit
+-----|----------
+all|4 hours
+big|2 days
+huge|15 days
+
+An example could be:
+```bash
+sbatch -q big myjob.sh
+```
+
+The amount of memory can be also set through an argument.
+The default value is *2GB* in order to increase it use.
+
+
+```bash
+sbatch --mem=8G myjob.sh
+```
