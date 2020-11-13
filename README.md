@@ -71,3 +71,37 @@ Once the job is submited you can visualize all you current jobs with:
 ```bash
 squeue -u username
 ```
+
+## Transfering data to Sert
+
+Data can be transfered to Sert by using secure copy.
+This command must be executed *on your machine* not on Sert.
+
+```bash
+scp -r directory_to_copy username@gw.ac.upc.edu:/scratch/nas/num/username/.
+scp file_to_copy username@gw.ac.upc.edu:/scratch/nas/num/username/.
+```
+
+For dowloading data the same can be done, remember to run this commands *on your machine*.
+
+
+```bash
+scp -r username@gw.ac.upc.edu:/scratch/nas/num/username/directory_to_copy .
+scp username@gw.ac.upc.edu:/scratch/nas/num/username/file_to_copy .
+```
+
+However, the use of *zip* for high volumes of data is recomended.
+This requieres more commands to be executed but faster transfer speed.
+You first need to compress the folder or file by executing.
+
+```bash
+zip -r folder_to_transfer
+zip file_to_transfer
+```
+
+You the upload or download the file as previously stated.
+When you have it in the desired machine you can simply uncompress it with.
+
+```bash
+unzip my_file.zip
+```
