@@ -11,6 +11,14 @@ This can be done with the following command where you replace *username* by your
 ssh username@gw.ac.upc.edu
 ```
 
+While entering, the server will ask for a remote host and a remote user.
+Press enter in order to let the server use default.
+
+```bash
+Remote host [sert]:
+Remote user [username]:
+```
+
 When you enter to the server you will find yourself in the gateway.
 In order to move your scrach directory you will need to first discover in which partition of the disc it is.
 New accounts ususally are on the 4 partition.
